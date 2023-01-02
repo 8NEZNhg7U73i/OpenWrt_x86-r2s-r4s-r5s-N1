@@ -7,8 +7,11 @@ SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 mv -f ../feeds/ipq807x/ipq807x target/linux/
 ./scripts/feeds install -a -p wifi_ax -f
 
+<<<<<<< HEAD
 rm -rf package/feeds/wifi_ax/hostapd
 
+=======
+>>>>>>> update
 sed -i "/gl_feeds_common/d" feeds.conf
 sed -i "/ipq807x/d" feeds.conf
 sed -i "/wifi_ax/d" feeds.conf
@@ -20,6 +23,11 @@ rm -rf feeds/packages/net/xtables-addons package/feeds/packages/openvswitch
 
 sed -i "s/PKG_HASH:=.*/PKG_HASH:=skip/" package/feeds/wifi_ax/mac80211/Makefile
 
+<<<<<<< HEAD
+=======
+sed -i "s/192.168.1/10.0.0/" package/base-files/files/bin/config_generate
+
+>>>>>>> update
 rm -rf devices/common/patches/{glinet,imagebuilder.patch,iptables.patch,targets.patch,kernel-defaults.patch,disable_flock.patch}
 
 rm -rf toolchain/musl
