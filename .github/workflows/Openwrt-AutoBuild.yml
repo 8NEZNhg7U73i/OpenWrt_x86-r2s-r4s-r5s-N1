@@ -113,6 +113,7 @@ jobs:
         fi
 
     - name: Initialization environment
+      if: env.teste == 'true'
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
