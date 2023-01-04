@@ -163,6 +163,7 @@ jobs:
         fi
     
     - name: Free up disk space
+      if: env.teste == 'true'
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
